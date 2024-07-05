@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1  class="CookiClicker">
+        Cooki Clicker
+     </h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Lite</title>
+    <style>
+        .CookiClicker{
+            position: absolute;
+            bottom: 80%;
+            left: 35%;
+            font-size: 70px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #cookie {
+            position: absolute;
+            bottom: 50%;
+            left: 800px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-image: url('https://img.freepik.com/free-photo/chocolate-chip-cookies-isolated-white-background-ai-generative_123827-24066.jpg');
+            background-size: cover;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div id="cookie"></div>
+
+    <script>
+        const cookie = document.getElementById('cookie');
+        let cookies = 0;
+
+        cookie.addEventListener('click', () => {
+            cookies++;
+            updateCookies();
+        });
+
+        function updateCookies() {
+            document.title = `Cookies: ${cookies}`;
+        }
+    </script>
+    
+</body>
+</html>
